@@ -1,4 +1,4 @@
-name: reportes-dextools-${{ github.run_number }}
+name: reportes-dextools
 on:
   schedule:
     - cron: '15 * * * *'  # minuto 15 de cada hora
