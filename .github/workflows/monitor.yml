@@ -1,4 +1,4 @@
-name: reportes-dextools
+name: Monitor Playwright
 on:
   schedule:
     - cron: '15 * * * *'  # minuto 15 de cada hora
