@@ -5,6 +5,9 @@ on:
     - cron: '45 * * * *'  # minuto 45 de cada hora
   workflow_dispatch:       # permite ejecutar manualmente
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
