@@ -9,7 +9,17 @@ import path from 'path';
 
     // Botón para aceptar las cookies
     const cookiesBtn = page.locator('[data-cky-tag="accept-button"]');
-    if (await cookiesBtn.count() > 0) {cookiesBtn.click();}
+    //if (await cookiesBtn.count() > 0) {cookiesBtn.click();}
+    try {
+    if (await cookiesBtn.isVisible({ timeout: 5000 })) {
+     await cookiesBtn.click();
+    }
+    } catch {
+      console.log('Cookies no visible, continuo...');
+    }
+
+    /*
+    
     // Boton publi pequeña
     const puppetBtn = page.locator('.puppet-image-promo__close');
     if (await puppetBtn.count() > 0) {puppetBtn.click();}
@@ -17,8 +27,11 @@ import path from 'path';
     const perpBtn = page.locator('.puppet-slide-modal__close');
     if (await perpBtn.count() > 0) {perpBtn.click();}
     // Botón para abrir favoritos
-    //await page.click('svg[data-icon="star"]');
+    await page.click('svg[data-icon="star"]');
     
+    */
+
+
     // Devuelve la carpeta donde se guardará la captura
     let {folder, fileName} = funcDext.getFolder();
         
@@ -35,5 +48,7 @@ import path from 'path';
 
     // Tomar captura de toda la página (Full Page)
     await page.screenshot({ path: rutaFinal, fullPage: false });
+
+    console.log(rutaFinal);
 
 });
