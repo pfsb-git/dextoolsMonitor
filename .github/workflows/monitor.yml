@@ -26,3 +26,12 @@ jobs:
 
       - name: Ejecutar script
         run: npx playwright test -g "Captura DextBoard"
+
+        # 📸 SUBIDA DE SCREENSHOTS (IMPORTANTE)
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ github.run_id }}
+          path: screenshots/**/*
+          if-no-files-found: ignore
