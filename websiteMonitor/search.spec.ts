@@ -5,7 +5,7 @@ import { WATERMARK_STYLE } from '../config/paths';   // Configuracion estilos
 import path from 'path';
 
 
-  test('Captura DextBoard', async ({ page }) => {
+  test('Captura Buscador', async ({ page }) => {
     
     await page.goto(MONITORING_CONFIG.dextboardWeb);
     

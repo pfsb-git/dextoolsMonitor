@@ -4,7 +4,7 @@ import { MONITORING_CONFIG } from '../config/paths'; // Importamos la config
 import { WATERMARK_STYLE } from '../config/paths';   // Configuracion estilos
 import path from 'path';
 
-  test('Captura DextBoard', async ({ page }) => {
+  test('Captura PairExplorer', async ({ page }) => {
     
     await page.goto(MONITORING_CONFIG.pairExplorerWeb);
     

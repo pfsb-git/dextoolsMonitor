@@ -7,6 +7,8 @@ import path from 'path';
     
     await page.goto(MONITORING_CONFIG.dextboardWeb);
 
+    /*
+   
     // Botón para aceptar las cookies
     const cookiesBtn = page.locator('[data-cky-tag="accept-button"]');
     if (await cookiesBtn.count() > 0) {cookiesBtn.click();}
@@ -18,6 +20,8 @@ import path from 'path';
     // Botón para abrir favoritos
     await page.click('svg[data-icon="star"]');
     
+    */
+
     // Devuelve la carpeta donde se guardará la captura
     let {folder, fileName} = funcDext.getFolder();
         
