@@ -12,6 +12,8 @@ import path from 'path';
         await page.click('[data-cky-tag="accept-button"]');
         // Boton publi pequeña
         await page.click('.puppet-image-promo__close');
+        // Boton modal perptools
+        await page.click('.puppet-slide-modal__close');
         // Botón para abrir favoritos
         await page.click('svg[data-icon="star"]');
     

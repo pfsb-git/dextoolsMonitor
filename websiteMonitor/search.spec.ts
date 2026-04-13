@@ -13,6 +13,8 @@ import path from 'path';
     await page.click('[data-cky-tag="accept-button"]');
     // Boton publi pequeña
     await page.click('.puppet-image-promo__close');
+    // Boton modal perptools
+    await page.click('.puppet-slide-modal__close');
     // Abrir el buscador
     await page.locator('.search-pairs').click();
     
