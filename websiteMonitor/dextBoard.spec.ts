@@ -8,11 +8,13 @@ import path from 'path';
     await page.goto(MONITORING_CONFIG.dextboardWeb);
 
     // Botón para aceptar las cookies
-    await page.click('[data-cky-tag="accept-button"]');
+    const cookiesBtn = page.locator('[data-cky-tag="accept-button"]');
+    if (await cookiesBtn.count() > 0) {cookiesBtn.click();}
     // Boton publi pequeña
     await page.click('.puppet-image-promo__close');
     // Boton modal perptools
-    await page.click('.puppet-slide-modal__close');
+    const perpBtn = page.locator('.puppet-slide-modal__close');
+    if (await perpBtn.count() > 0) {perpBtn.click();}
     // Botón para abrir favoritos
     await page.click('svg[data-icon="star"]');
     
