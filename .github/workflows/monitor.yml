@@ -2,6 +2,8 @@ name: Run Dextools Monitor
 
 on:
   workflow_dispatch:   # 👈 ESTO crea el botón manual
+  schedule:
+    - cron: "15,45 * * * *"
 
 jobs:
   run-script:
