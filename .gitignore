@@ -10,3 +10,6 @@ package-lock.json
 
 # Config y entorno
 .env
+
+# Capturas
+screenshots/
